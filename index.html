@@ -1145,7 +1145,7 @@
 
     function loadConfig() {
         initializeTheme();
-        fetch('https://casadaimpressao.github.io/casadaimpressao/produtos/produtos/produtos.json?t=' + Date.now())
+        fetch('https://casadaimpressao.github.io/casadaimpressao/produtos/produtos.json?t=' + Date.now())
             .then(response => {
                 if (!response.ok) {
                    throw new Error('Network response was not ok');

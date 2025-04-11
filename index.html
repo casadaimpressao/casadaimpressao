@@ -189,54 +189,54 @@
     }
 
     .button-primary {
-      background-color: #3b82f6; /* Azul claro visível no modo claro */
-      color: #ffffff; /* Texto branco */
+      background-color: #3b82f6; 
+      color: #ffffff; 
       border-color: #3b82f6;
     }
     .button-primary:hover:not(:disabled) {
-      background-color: #2563eb; /* Azul mais escuro no hover */
+      background-color: #2563eb; 
       border-color: #2563eb;
     }
     .button-primary:disabled {
-      background-color: #e5e7eb; /* Cinza claro */
-      color: #6b7280; /* Cinza médio */
+      background-color: #e5e7eb; 
+      color: #6b7280; 
       border-color: #d1d5db;
       cursor: not-allowed;
       opacity: 0.7;
     }
     .dark .button-primary {
-      background-color: #60a5fa; /* Azul mais claro no escuro */
-      color: #1f2937; /* Texto quase preto */
+      background-color: #60a5fa; 
+      color: #1f2937;
       border-color: #60a5fa;
     }
     .dark .button-primary:hover:not(:disabled) {
-      background-color: #93c5fd; /* Ainda mais claro no hover escuro */
+      background-color: #93c5fd;
       border-color: #93c5fd;
     }
     .dark .button-primary:disabled {
-      background-color: #374151; /* Cinza escuro */
-      color: #9ca3af; /* Cinza claro */
+      background-color: #374151; 
+      color: #9ca3af;
       border-color: #4b5563;
     }
 
     .button-secondary {
-      background-color: #e5e7eb; /* Cinza claro no modo claro */
-      color: #1f2937; /* Texto quase preto */
-      border-color: #d1d5db; /* Borda cinza */
+      background-color: #e5e7eb; 
+      color: #1f2937; 
+      border-color: #d1d5db; 
     }
     .button-secondary:hover {
-      background-color: #2563eb; /* Azul escuro no hover */
-      color: #ffffff; /* Texto branco */
+      background-color: #2563eb; 
+      color: #ffffff;
       border-color: #2563eb;
     }
     .dark .button-secondary {
-      background-color: #374151; /* Cinza escuro no modo escuro */
-      color: #f9fafb; /* Texto quase branco */
+      background-color: #374151; 
+      color: #f9fafb; 
       border-color: #4b5563;
     }
     .dark .button-secondary:hover {
-      background-color: #60a5fa; /* Azul claro no hover */
-      color: #1f2937; /* Texto quase preto */
+      background-color: #60a5fa; 
+      color: #1f2937; 
       border-color: #60a5fa;
     }
 
@@ -301,35 +301,30 @@
         opacity: 0;
     }
 
-    /* --- Cart Button Styling --- */
     .cart-button {
-      padding: 0.65rem 0.85rem; /* Adjusted padding */
-      border-radius: var(--radius); /* Standard radius, not 50% */
-      gap: 0.4rem; /* Space between icon and number */
-      /* Remove fixed width/height if button-icon class adds them */
+      padding: 0.65rem 0.85rem; 
+      border-radius: var(--radius);
+      gap: 0.4rem; 
       width: auto;
       height: auto;
     }
     .cart-button svg {
-      width: 1.25rem; /* Icon size */
+      width: 1.25rem; 
       height: 1.25rem;
-      flex-shrink: 0; /* Prevent icon from shrinking */
+      flex-shrink: 0; 
     }
     .cart-count {
-      /* Removed absolute positioning and badge styles */
-      font-size: 0.9rem; /* Slightly larger number */
+      font-size: 0.9rem; 
       font-weight: 500;
       line-height: 1;
-      color: inherit; /* Inherit color from button */
-      background-color: transparent; /* No background */
-      padding: 0; /* No extra padding */
-      border-radius: 0; /* No border radius */
-      display: none; /* Hidden by default, shown via JS */
-      align-items: center; /* Vertically align if needed */
-      margin-left: 0; /* Use gap on parent button */
+      color: inherit; 
+      background-color: transparent; 
+      padding: 0; 
+      border-radius: 0;
+      display: none; 
+      align-items: center; 
+      margin-left: 0; 
     }
-    /* --- End Cart Button Styling --- */
-
     .cart-overlay {
         position: fixed; top: 0; left: 0; width: 100%; height: 100%;
         background-color: rgba(0, 0, 0, 0.6);
@@ -793,36 +788,37 @@
 		height: 1rem;
 	}
 
-    .toast {
-      position: fixed;
-      bottom: 1.5rem;
-      right: 1.5rem;
-      background-color: #3b82f6 !important; /* Azul fixo */
-      color: #ffffff !important; /* Texto branco */
-      border-radius: var(--radius);
-      padding: 1rem 1.5rem;
-      box-shadow: var(--shadow-lg);
-      z-index: 110;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.3s ease, transform 0.3s ease;
-      font-size: 0.95rem;
-      border-left: 4px solid #2563eb !important;
-    }
-    .toast.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .toast.error {
-      background-color: #dc2626 !important; /* Vermelho para erros */
-      color: #ffffff !important;
-      border-left-color: #b91c1c !important;
-    }
-    .toast.info {
-      background-color: #3b82f6 !important; /* Azul para info */
-      color: #ffffff !important;
-      border-left-color: #2563eb !important;
-    }
+.toast {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #3b82f6 !important; 
+    color: #ffffff !important;
+    border-radius: var(--radius);
+    padding: 1rem 1.5rem;
+    box-shadow: var(--shadow-lg);
+    z-index: 110;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 0.95rem;
+    border-left: 4px solid #2563eb !important;
+    max-width: 90%;
+    text-align: center;
+}
+.toast.show {
+    opacity: 1;
+}
+.toast.error {
+    background-color: #dc2626 !important;
+    color: #ffffff !important;
+    border-left-color: #b91c1c !important;
+}
+.toast.info {
+    background-color: #3b82f6 !important; 
+    color: #ffffff !important;
+    border-left-color: #2563eb !important;
+}
 
     .hidden { display: none !important; }
     .w-full { width: 100%; }
@@ -865,7 +861,7 @@
         .button-icon { padding: 0.5rem; width: auto; height: auto; }
         .button-icon svg { width: 1.1rem; height: 1.1rem; }
         .theme-toggle-button { padding: 0.5rem; }
-        .cart-button { padding: 0.5rem 0.7rem; } /* Adjusted padding for small screens */
+        .cart-button { padding: 0.5rem 0.7rem; } 
         .cart-button svg { width: 1.1rem; height: 1.1rem; }
         .cart-count { font-size: 0.8rem; }
         #categories-button { font-size: 0.85rem; padding: 0.5rem 0.8rem;}
@@ -914,16 +910,14 @@
             </div>
           </div>
 
-          <!-- Updated Cart Button: Removed 'button-icon' class, added cart-count inside -->
           <button class="button button-secondary cart-button" id="cart-button" title="Carrinho">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path>
             </svg>
             <span class="cart-count" id="cart-count">0</span>
           </button>
-          <!-- End Updated Cart Button -->
 
-          <button class="button button-icon theme-toggle-button" id="theme-toggle" title="Alterar Tema">
+	  <button class="button button-icon theme-toggle-button" id="theme-toggle" title="Alterar Tema">
               <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
               <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
           </button>
@@ -955,6 +949,13 @@
               <span>Total</span>
               <span id="cart-total">R$ 0,00</span>
           </div>
+		  <button class="button button-secondary w-full mb-4" id="copy-order">
+    <svg class="mr-2" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+    </svg>
+    Copiar Pedido
+</button>
           <button class="button button-primary w-full" id="send-whatsapp" disabled>Enviar Pedido via WhatsApp</button>
       </div>
   </div>
@@ -1118,7 +1119,7 @@
     const cartCloseButton = document.getElementById('cart-close-button');
     const cartItemsContainer = document.getElementById('cart-items');
     const cartTotalElement = document.getElementById('cart-total');
-    const cartCountElement = document.getElementById('cart-count'); // Reference to the span remains the same
+    const cartCountElement = document.getElementById('cart-count');
     const sendWhatsappButton = document.getElementById('send-whatsapp');
     const searchInput = document.getElementById('search-input');
     const categoriesButton = document.getElementById('categories-button');
@@ -1179,9 +1180,7 @@
         })
         .then(data => {
             if (data && Array.isArray(data.products) && Array.isArray(data.categories)) {
-                // Mesclar defaultConfig com dados remotos, mas sobrescrever whatsappNumber depois
                 config = { ...defaultConfig, ...data };
-                // Forçar o uso do número do código
                 config.whatsappNumber = defaultConfig.whatsappNumber;
                 localStorage.setItem('graficaConfig', JSON.stringify(config));
             } else {
@@ -1191,9 +1190,8 @@
         })
         .catch((error) => {
             console.error("Error loading remote config:", error);
-            // Em caso de erro, usar defaultConfig diretamente e forçar o número
             config = JSON.parse(JSON.stringify(defaultConfig));
-            config.whatsappNumber = defaultConfig.whatsappNumber; // Garantir o número do código
+            config.whatsappNumber = defaultConfig.whatsappNumber; 
             initializeApp();
         });
 }
@@ -1211,8 +1209,8 @@
         renderAllUIElements();
         setupTabs();
         handleRouting();
-        updateCartCount(); // Update cart count on initial load
-        updateCartDisplay(); // Update cart display on initial load
+        updateCartCount();
+        updateCartDisplay();
     }
 
     function renderAllUIElements() {
@@ -1259,7 +1257,6 @@
     function renderProducts(filter = null) {
     const productsGrid = mainElement.querySelector('#products-grid');
     if (!productsGrid) {
-        // Se navigating away, ensure admin actions are hidden on potential stale cards
         document.querySelectorAll('.product-admin-actions').forEach(el => el.style.display = isAdminLoggedIn ? 'flex' : 'none');
         return;
     }
@@ -1316,7 +1313,6 @@
             }
         });
 
-        // Add listeners only if admin buttons are potentially visible
         const editButton = card.querySelector('.edit-product');
         const removeButton = card.querySelector('.remove-product');
         if (editButton) editButton.addEventListener('click', (e) => { e.stopPropagation(); if (isAdminLoggedIn) editProduct(product.id); });
@@ -1406,6 +1402,38 @@
             });
         }
     }
+	
+function copyOrderToClipboard() {
+    if (cart.length === 0) {
+        showToast('Seu carrinho está vazio.', 'error');
+        return;
+    }
+
+    let message = "Olá! Gostaria de fazer o seguinte pedido:\n\n";
+    cart.forEach(item => {
+        const price = typeof item.selectedVariation?.price === 'number' ? item.selectedVariation.price : 0;
+        const subtotal = (price * item.quantity).toFixed(2).replace('.', ',');
+        const variationText = item.selectedVariation?.type === 'quantity'
+            ? `${item.selectedVariation.amount || '?'} un.`
+            : `${item.selectedVariation.width || '?'}m x ${item.selectedVariation.height || '?'}m`;
+
+        message += `*${item.name}* (ID: ${item.id || 'N/A'})\n`;
+        message += ` - Variação: ${variationText}\n`;
+        message += ` - Qtd: ${item.quantity}\n`;
+        message += ` - Subtotal: R$ ${subtotal}\n\n`;
+    });
+    message += `*Total do Pedido: R$ ${calculateTotal().toFixed(2).replace('.', ',')}*`;
+
+    // Copiar para a área de transferência
+    navigator.clipboard.writeText(message)
+        .then(() => {
+            showToast('Pedido copiado para a área de transferência!', 'info');
+        })
+        .catch((err) => {
+            console.error('Erro ao copiar pedido:', err);
+            showToast('Erro ao copiar o pedido.', 'error');
+        });
+}
 
 function renderCategories() {
     categoriesMenu.innerHTML = '<div class="category-item" data-slug="all">Todas Categorias<button class="share-category-btn" data-slug="all" title="Compartilhar Todas as Categorias"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg></button></div>';
@@ -1562,15 +1590,11 @@ function shareCategory(slug) {
         localStorage.setItem('graficaCart', JSON.stringify(cart));
     }
 
-    // --- Updated updateCartCount function ---
     function updateCartCount() {
         const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-        cartCountElement.textContent = totalItems; // Set the number text
-        // Toggle display based on count. Uses 'inline-flex' to potentially help alignment with icon
+        cartCountElement.textContent = totalItems; 
         cartCountElement.style.display = totalItems > 0 ? 'inline-flex' : 'none';
     }
-    // --- End Updated updateCartCount function ---
-
 
     function updateCartDisplay() {
         cartItemsContainer.innerHTML = '';
@@ -1648,12 +1672,11 @@ function shareCategory(slug) {
         adminPanel.classList.remove('open');
         adminOverlay.classList.remove('open');
         document.body.style.overflow = '';
-        // Delay adding hidden class slightly to allow transition
         setTimeout(() => {
-             if (!adminPanel.classList.contains('open')) { // Check if it wasn't reopened
+             if (!adminPanel.classList.contains('open')) { 
                  adminPanel.classList.add('hidden');
              }
-        }, 300); // Should match transition duration
+        }, 300); 
         if (editingProductId) {
             resetProductForm();
         }
@@ -1670,12 +1693,12 @@ function shareCategory(slug) {
             adminLoginSection.classList.add('hidden');
             adminMainSection.classList.remove('hidden');
             renderCategoryOptions();
-             document.querySelectorAll('.product-admin-actions').forEach(el => el.style.display = 'flex'); // Show admin actions on existing cards
+             document.querySelectorAll('.product-admin-actions').forEach(el => el.style.display = 'flex'); 
             showToast('Login bem-sucedido!');
         } else {
             showToast('Usuário ou senha inválidos.', 'error');
             isAdminLoggedIn = false;
-             document.querySelectorAll('.product-admin-actions').forEach(el => el.style.display = 'none'); // Hide admin actions
+             document.querySelectorAll('.product-admin-actions').forEach(el => el.style.display = 'none'); 
         }
     }
 
@@ -1683,7 +1706,7 @@ function shareCategory(slug) {
         isAdminLoggedIn = false;
         adminMainSection.classList.add('hidden');
         adminLoginSection.classList.remove('hidden');
-         document.querySelectorAll('.product-admin-actions').forEach(el => el.style.display = 'none'); // Hide admin actions
+         document.querySelectorAll('.product-admin-actions').forEach(el => el.style.display = 'none'); 
         closeAdminPanel();
         showToast('Logout realizado.');
     }
@@ -1818,7 +1841,7 @@ function shareCategory(slug) {
 
         localStorage.setItem('graficaConfig', JSON.stringify(config));
         if(window.location.hash === '' || window.location.hash === '#') {
-             renderProducts(); // Re-render product list to show changes/new product
+             renderProducts(); 
         }
         resetProductForm();
     }
@@ -1862,11 +1885,11 @@ function shareCategory(slug) {
             localStorage.setItem('graficaConfig', JSON.stringify(config));
             showToast('Produto removido com sucesso!');
              if(window.location.hash === '' || window.location.hash === '#') {
-                renderProducts(); // Re-render product list after removal
+                renderProducts(); 
              }
 
             if (editingProductId === productId) {
-                resetProductForm(); // Reset form if the edited product was deleted
+                resetProductForm(); 
             }
         } else {
             showToast('Erro ao remover: Produto não encontrado.', 'error');
@@ -1919,8 +1942,8 @@ function shareCategory(slug) {
 
         config.categories.push({ name, slug });
         localStorage.setItem('graficaConfig', JSON.stringify(config));
-        renderCategories(); // Update category dropdown in header
-        renderCategoryOptions(); // Update category select in admin form
+        renderCategories(); 
+        renderCategoryOptions(); 
         categoryForm.reset();
         showToast('Categoria cadastrada com sucesso!');
     }
@@ -1949,7 +1972,7 @@ function shareCategory(slug) {
     if (cart.length === 0) { showToast('Seu carrinho está vazio.', 'error'); return; }
     if (!config.whatsappNumber) { showToast('Número do WhatsApp não configurado.', 'error'); return; }
 
-    console.log("Número de WhatsApp usado:", config.whatsappNumber); // Log para verificação
+    console.log("Número de WhatsApp usado:", config.whatsappNumber); 
 
     let message = "Olá! Gostaria de fazer o seguinte pedido:\n\n";
     cart.forEach(item => {
@@ -1974,38 +1997,34 @@ function shareCategory(slug) {
 }
 
 
-    function showToast(message, type = 'info', duration = 3000) { // Mudei de 'success' para 'info' como padrão
+    function showToast(message, type = 'info', duration = 3000) { 
         const toast = document.createElement('div');
         toast.className = `toast ${type}`;
         toast.textContent = message;
         toastContainer.appendChild(toast);
 
-        // Trigger reflow to enable transition
         toast.offsetHeight;
 
         toast.classList.add('show');
 
         setTimeout(() => {
             toast.classList.remove('show');
-            // Remove element after transition ends
             const removeToast = () => {
                  if (toast.parentNode === toastContainer) {
                     toastContainer.removeChild(toast);
                  }
                  toast.removeEventListener('transitionend', removeToast);
-                 toast.removeEventListener('webkittransitionend', removeToast); // Safari fallback
+                 toast.removeEventListener('webkittransitionend', removeToast);
             }
             toast.addEventListener('transitionend', removeToast);
-            toast.addEventListener('webkittransitionend', removeToast); // Safari fallback
-            // Fallback timeout in case transitionend doesn't fire
+            toast.addEventListener('webkittransitionend', removeToast);
             setTimeout(() => {
                  removeToast();
-            }, duration + 500); // duration + transition time
+            }, duration + 500); 
         }, duration);
     }
 
 
-    // --- Event Listeners ---
     document.addEventListener('DOMContentLoaded', loadConfig);
 
     window.addEventListener('hashchange', handleRouting);
@@ -2031,6 +2050,8 @@ function shareCategory(slug) {
             categoriesMenu.classList.remove('open');
         }
     });
+	
+	document.getElementById('copy-order').addEventListener('click', copyOrderToClipboard);
 
     themeToggleButton.addEventListener('click', toggleTheme);
 
@@ -2110,7 +2131,7 @@ function shareCategory(slug) {
                 }
                 if (processedCount === filesToAdd.length) {
                     renderImagePreview();
-                    productImagesInput.value = ''; // Clear input after processing
+                    productImagesInput.value = ''; 
                     productImagesInput.disabled = tempImages.length >= 3;
                 }
             });
